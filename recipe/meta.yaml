@@ -1,5 +1,6 @@
 {% set name = "inifix" %}
-{% set version = "5.0.3" %}
+{% set version = "5.0.4" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/inifix-{{ version }}.tar.gz
-  sha256: d21b8a5652054ef90c6b4079559dc6dc04a76092e41aa14ba7849c039a6892a0
+  sha256: 573be2064dcd6858c3beae2b19d2ff6aaa954c020be333cf9f51831ab8e9fee3
 
 build:
   entry_points:
@@ -19,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -36,6 +37,7 @@ test:
     - inifix-validate --help
     - pytest -ra tests
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - hypothesis
