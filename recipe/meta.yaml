@@ -1,5 +1,6 @@
 {% set name = "inifix" %}
 {% set version = "5.0.4" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -19,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -36,6 +37,7 @@ test:
     - inifix-validate --help
     - pytest -ra tests
   requires:
+    - python {{ python_min }}
     - pip
     - pytest
     - hypothesis
