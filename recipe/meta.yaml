@@ -11,9 +11,6 @@ source:
   sha256: 32d3ff2aa51484f89c947e3aa9d0fcc48b61b7386e03d0fca66d9bfa2679d15a
 
 build:
-  entry_points:
-    - inifix-format = inifix.format:main
-    - inifix-validate = inifix.validate:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
@@ -35,8 +32,6 @@ test:
     - inifix
   commands:
     - pip check
-    - inifix-format --help
-    - inifix-validate --help
     - pytest -ra tests
   requires:
     - python {{ python_min }}
