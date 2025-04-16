@@ -24,6 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - typing-extensions >=4.2.0  # only needed for Python 3.10
+    - exceptiongroup >=1.0.0  # only needed for Python 3.10
 
 test:
   source_files:
