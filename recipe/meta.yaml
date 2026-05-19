@@ -37,6 +37,7 @@ test:
     - pip
     - pytest
     - hypothesis
+    - runtime_introspect
 
 
 about:
