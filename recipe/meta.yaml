@@ -1,6 +1,6 @@
 {% set name = "inifix" %}
 {% set version = "7.0.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -23,8 +23,6 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - typing-extensions >=4.2.0  # only needed for Python 3.10
-    - exceptiongroup >=1.0.0  # only needed for Python 3.10
 
 test:
   source_files:
