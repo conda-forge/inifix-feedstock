@@ -1,5 +1,5 @@
 {% set name = "inifix" %}
-{% set version = "7.0.0" %}
+{% set version = "7.0.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/inifix-{{ version }}.tar.gz
-  sha256: f49dfe1beef23ba9bd5f46be698f7b1f8593eb83f21da029bb5f6cbf9f81cfcd
+  sha256: 1a396f77860f68ee0a1be77d7d2f1bb703583402f4019275a0ffe0acec44cef3
 
 build:
   noarch: python
